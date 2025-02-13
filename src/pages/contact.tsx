@@ -9,7 +9,15 @@ const Contact = () => {
 
   const sendEmail = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+		const formData = new FormData(e.currentTarget);
+		const honeypotValue = formData.get("honeypot") as string;
     
+		if (honeypotValue) {
+			e.currentTarget.reset();
+			return;
+		}
+		
     emailjs.sendForm(
       "AAB_Service",
       "AAB_Email_Template",
@@ -68,6 +76,10 @@ const Contact = () => {
 					<div className="textarea-container">
 						<textarea className="textarea" name="message" required/>
 						<label>Message  *</label>
+					</div>
+
+					<div style={{ display: "none" }}>
+  					<input type="text" name="honeypot" autoComplete="off" />
 					</div>
 					
 					<input type="submit" className="contact-submit" value="Send" />
