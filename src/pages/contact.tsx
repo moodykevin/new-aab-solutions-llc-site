@@ -1,21 +1,29 @@
 import Head from "next/head";
 import emailjs from '@emailjs/browser';
 import { Container } from 'react-bootstrap'
+import { useCallback } from "react";
 
 
-const contact = () => {
 
-	function sendEmail(e: any) {
-		e.preventDefault();
-		emailjs.sendForm('Test_service', 'test_template', e.target, '_ZjNjzqvESvjOCGJB')
-			.then((result) => {
-					console.log(result.text);
-			}, (error) => {
-					console.log(error.text);
-			});
-		e.target.reset();
-		alert("Thank you for submitting! All inquiries will be responded to within 24 hours.");
-	};
+const Contact = () => {
+
+  const sendEmail = useCallback((e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    emailjs.sendForm(
+      "Test_service",
+      "test_template",
+      e.currentTarget,
+      "_ZjNjzqvESvjOCGJB"
+    )
+    .then(
+      (result) => console.log(result.text),
+      (error) => console.log(error.text)
+    );
+
+    e.currentTarget.reset();
+    alert("Thank you for submitting! All inquiries will be responded to within 24 hours.");
+  }, []);
 
 	return(
 		<>
@@ -70,4 +78,4 @@ const contact = () => {
     )
 }
 
-export default contact;
+export default Contact;

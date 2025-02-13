@@ -87,6 +87,9 @@ a {
 
 .home-pic {
   padding: 10px;
+	width: auto;
+	height: auto;
+	object-fit: cover;
 }
 
 
@@ -515,7 +518,7 @@ html {
 
 .carousel-pic {
   /* Make sure images fit the container while keeping aspect ratio */
-  height: auto;
+  height: 100%;
   max-height: 500px;  /* Ensure images don't exceed 500px height */
   width: 100%;  /* Ensure images fill the width of the carousel */
   margin: auto;

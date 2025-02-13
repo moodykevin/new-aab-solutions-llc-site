@@ -1,16 +1,20 @@
 import { Container, Col, Row } from 'react-bootstrap';
 import Link from 'next/link';
+import Image from "next/image";
 
 const Footer = () => {
   return (
     <div style={{ backgroundColor: 'rgb(41,58,97)', color: 'rgb(240,240,240)' }}>
       <br />
-      <a href="/" className="logo-container">
-        <img
+      <Link href="/" className="logo-container">
+        <Image
           src="/assets/AllAccessBuilding_logo_wide_white_red.webp"
           alt="All Access Building Logo"
+					width={500}
+					height={300}
+					className="home-pic"
         />
-      </a>
+      </Link>
       <br />
       <Row className="footer-text-container">
         <Col xs={12} sm={4} md={4} lg={2} className="footer-item-container">

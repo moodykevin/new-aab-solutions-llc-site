@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import { Container, Carousel } from 'react-bootstrap'
 
 
@@ -18,7 +19,7 @@ const healthcare = () => {
 									<p> We specialize in medical facility construction that provide patients and providers
 									with the best possible care. Our team of expert builders and designers work hand-in-hand with healthcare professionals
 									to create facilities that are functional, efficient, and polished. We understand the unique requirements
-									of healthcare construction and use our expertise to deliver high-quality projects that meet or exceed our clients' 
+									of healthcare construction and use our expertise to deliver high-quality projects that meet or exceed our clients&apos; 
 									expectations. Whether you are building a new medical facility or renovating an existing one, we have the experience 
 									and skills to get the job done right.</p>
 							</Container>
@@ -43,7 +44,7 @@ const healthcare = () => {
 									>
 										{['mri1.webp', 'mri_room_1.webp', 'mri2.webp', 'mri_room_2.webp', 'mri3.webp', 'mri4.webp', 'waiting.webp'].map((img, index) => (
 										<Carousel.Item key={index}>
-											<img src={`/imgs/${img}`} alt="" className="carousel-pic" />
+											<Image src={`/imgs/${img}`} alt="" className="carousel-pic" width={500} height={500}/>
 										</Carousel.Item>
 										))}
 									</Carousel>

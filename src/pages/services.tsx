@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
 import { Container, Row, Col } from 'react-bootstrap'
 
 const services = () => {
@@ -29,8 +31,8 @@ const services = () => {
                     <h2 className='hero-cover-text'>Company leaders have proven expertise in project management, scheduling, 
                     job cost accounting, quality control, and project closeout.</h2>
                     <Container fluid style={{ display:"flex" , justifyContent:"center" }}>
-                    <a href='/healthcare' className='button services-button' style={{right:"2%"}}>Healthcare </a>
-                    <a href='/commercial' className='button services-button' style={{left:"2%"}}>Commercial </a>
+											<Link href='/healthcare' className='button services-button' style={{right:"2%"}}>Healthcare </Link>
+											<Link href='/commercial' className='button services-button' style={{left:"2%"}}>Commercial </Link>
                     </Container>
                 </Container>
 
@@ -74,10 +76,10 @@ const services = () => {
                 </Container>
 
             <Container className="bottom-pic-container">
-                <img alt="" className="home-pic" src='/imgs/aab_fencing.webp'></img>
-                <img alt="" className="home-pic" src='/imgs/carwash_interior.webp'></img>
-                <img alt="" className="home-pic" src='/imgs/hotel_work.webp'></img>
-                <img alt="" className="home-pic" src='/imgs/mri4.webp'></img>
+								<Image src="/imgs/aab_fencing.webp" alt="" className="home-pic" width={500} height={300}/>
+								<Image src="/imgs/carwash_interior.webp" alt="" className="home-pic" width={500} height={500}/>
+								<Image src="/imgs/hotel_work.webp" alt="" className="home-pic" width={500} height={300} />
+								<Image src="/imgs/mri4.webp" alt="" className="home-pic" width={500} height={300} />
             </Container>
         </Container>
         </>

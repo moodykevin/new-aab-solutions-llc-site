@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import { Container, Carousel } from 'react-bootstrap'
 
 
@@ -33,7 +34,7 @@ const commercial = () => {
 							We work closely with our clients to develop a timeline that 
 							minimizes disruption and ensures that the project is completed on time and within budget. 
 							Our speed and efficiency have helped us become a go-to firm for commercial projects, 
-							and we take pride in delivering results that exceed our clients' expectations. </p>
+							and we take pride in delivering results that exceed our clients&apos; expectations. </p>
 						</Container>                        
 
             <Container className="carousel-container">
@@ -56,7 +57,7 @@ const commercial = () => {
                 '/imgs/exterior_walls.webp'
                 ].map((src, index) => (
                 <Carousel.Item key={index}>
-                    <img src={src} alt="" className="carousel-pic" />
+                    <Image src={src} alt="" className="carousel-pic" width={500} height={500}/>
                 </Carousel.Item>
                 ))}
             </Carousel>

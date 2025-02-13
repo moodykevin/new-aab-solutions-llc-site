@@ -1,4 +1,5 @@
 import { Container, Navbar, Nav } from 'react-bootstrap';
+import Image from "next/image";
 
 const Banner = () => {
     return (
@@ -12,7 +13,7 @@ const Banner = () => {
                 >
                     {/* Logo */}
                     <Navbar.Brand href="/" className="d-flex align-items-center">
-                        <img src='/assets/AllAccessBuilding_logo_wide.webp' alt="Logo" width="240" height="80" />
+                        <Image src='/assets/AllAccessBuilding_logo_wide.webp' alt="Logo" width="240" height="80" />
                     </Navbar.Brand>
 
                     {/* Menu Toggle */}
