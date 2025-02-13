@@ -11,8 +11,8 @@ const Contact = () => {
     e.preventDefault();
     
     emailjs.sendForm(
-      "Test_service",
-      "test_template",
+      "AAB_Service",
+      "AAB_Email_Template",
       e.currentTarget,
       "_ZjNjzqvESvjOCGJB"
     )
